@@ -1,5 +1,5 @@
-Create data models powered by wordpress that are served as client side json objects
-
+Create data models powered by wordpress that are served as client side json objects  
+  
 - install wordpress
 - activate theme
 - change defaults (defaultPage, defaultPageDir, pathPrefix, pathname) in dynamics.js
@@ -12,24 +12,24 @@ Create data models powered by wordpress that are served as client side json obje
 optional simple JSON data return API:
 - change defaults in _data and move to root directory
 - update the htaccess in that directory (see below for sample)
+  
+  
+demo:  
+http://50.87.144.13/~illatoz/  
+  
+.htaccess sample  
+RewriteEngine On  
+RewriteBase /~illatoz/  
+RewriteRule ^index\.php$ - [L]  
+RewriteCond %{REQUEST_FILENAME} !-f  
+RewriteCond %{REQUEST_FILENAME} !-d  
+RewriteRule . index.php [L]  
 
-
-demo:
-http://50.87.144.13/~illatoz/
-
-.htaccess sample
-RewriteEngine On
-RewriteBase /~illatoz/
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php [L]
-
-/_data/.htaccess sample
-RewriteBase /~illatoz/wp-content/themes/illatoz_wp/_data/
-RewriteEngine On 
-RewriteBase /~illatoz/wp-content/themes/illatoz_wp/_data/
-RewriteRule ^index.php$ - [L] 
-RewriteCond %{REQUEST_FILENAME} !-f 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteRule . index.php [L]
+/_data/.htaccess sample  
+RewriteBase /~illatoz/wp-content/themes/illatoz_wp/_data/  
+RewriteEngine On  
+RewriteBase /~illatoz/wp-content/themes/illatoz_wp/_data/  
+RewriteRule ^index.php$ - [L]  
+RewriteCond %{REQUEST_FILENAME} !-f  
+RewriteCond %{REQUEST_FILENAME} !-d  
+RewriteRule . index.php [L]  
